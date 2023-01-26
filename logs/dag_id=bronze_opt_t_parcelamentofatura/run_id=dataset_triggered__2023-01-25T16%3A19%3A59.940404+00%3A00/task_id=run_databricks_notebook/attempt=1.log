@@ -1,0 +1,34 @@
+[2023-01-25T13:20:12.627-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: bronze_opt_t_parcelamentofatura.run_databricks_notebook dataset_triggered__2023-01-25T16:19:59.940404+00:00 [queued]>
+[2023-01-25T13:20:13.011-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: bronze_opt_t_parcelamentofatura.run_databricks_notebook dataset_triggered__2023-01-25T16:19:59.940404+00:00 [queued]>
+[2023-01-25T13:20:13.011-0300] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-25T13:20:13.012-0300] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-25T13:20:13.012-0300] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-25T13:20:13.485-0300] {taskinstance.py:1304} INFO - Executing <Task(DatabricksSubmitRunOperator): run_databricks_notebook> on 2023-01-25 16:19:59.940404+00:00
+[2023-01-25T13:20:13.490-0300] {standard_task_runner.py:55} INFO - Started process 1758799 to run task
+[2023-01-25T13:20:13.494-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'bronze_opt_t_parcelamentofatura', 'run_databricks_notebook', 'dataset_triggered__2023-01-25T16:19:59.940404+00:00', '--job-id', '1555', '--raw', '--subdir', 'DAGS_FOLDER/bronze/dock_opt/bronze_opt_t_parcelamentofatura.py', '--cfg-path', '/tmp/tmp3zdf8m3d']
+[2023-01-25T13:20:13.500-0300] {standard_task_runner.py:83} INFO - Job 1555: Subtask run_databricks_notebook
+[2023-01-25T13:20:16.626-0300] {task_command.py:389} INFO - Running <TaskInstance: bronze_opt_t_parcelamentofatura.run_databricks_notebook dataset_triggered__2023-01-25T16:19:59.940404+00:00 [running]> on host vm-airflow-01
+[2023-01-25T13:20:19.319-0300] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=matheus.rodrigues@fortbrasil.com.br
+AIRFLOW_CTX_DAG_ID=bronze_opt_t_parcelamentofatura
+AIRFLOW_CTX_TASK_ID=run_databricks_notebook
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-25T16:19:59.940404+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=dataset_triggered__2023-01-25T16:19:59.940404+00:00
+[2023-01-25T13:20:19.857-0300] {base.py:73} INFO - Using connection ID 'adb' for task execution.
+[2023-01-25T13:20:20.054-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-25T13:20:21.373-0300] {databricks.py:50} INFO - Run submitted with run_id: 181611
+[2023-01-25T13:20:21.374-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-25T13:20:22.446-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-25T13:20:22.759-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': '', 'state_message': ''}
+[2023-01-25T13:20:22.760-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/749765919671416/run/181611
+[2023-01-25T13:20:22.760-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-25T13:20:33.378-0300] {local_task_job.py:223} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-01-25T13:20:33.389-0300] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 1758799. PIDs of all processes in the group: [1758799]
+[2023-01-25T13:20:33.389-0300] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 1758799
+[2023-01-25T13:20:33.389-0300] {taskinstance.py:1483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-01-25T13:20:33.390-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-25T13:20:33.751-0300] {databricks.py:381} INFO - Task: run_databricks_notebook with run_id: 181611 was requested to be cancelled.
+[2023-01-25T13:20:34.621-0300] {process_utils.py:79} INFO - Process psutil.Process(pid=1758799, status='terminated', exitcode=0, started='13:20:13') (1758799) terminated with exit code 0

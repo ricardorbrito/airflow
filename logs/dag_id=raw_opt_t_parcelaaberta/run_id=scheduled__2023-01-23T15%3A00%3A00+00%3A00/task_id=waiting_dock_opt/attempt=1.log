@@ -1,0 +1,27 @@
+[2023-01-24T12:00:25.523-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_parcelaaberta.waiting_dock_opt scheduled__2023-01-23T15:00:00+00:00 [queued]>
+[2023-01-24T12:00:25.924-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_parcelaaberta.waiting_dock_opt scheduled__2023-01-23T15:00:00+00:00 [queued]>
+[2023-01-24T12:00:25.925-0300] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24T12:00:25.925-0300] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-24T12:00:25.925-0300] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-24T12:00:26.561-0300] {taskinstance.py:1304} INFO - Executing <Task(SqlSensor): waiting_dock_opt> on 2023-01-23 15:00:00+00:00
+[2023-01-24T12:00:26.568-0300] {standard_task_runner.py:55} INFO - Started process 1420203 to run task
+[2023-01-24T12:00:26.588-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'raw_opt_t_parcelaaberta', 'waiting_dock_opt', 'scheduled__2023-01-23T15:00:00+00:00', '--job-id', '1262', '--raw', '--subdir', 'DAGS_FOLDER/raw/dock_opt/raw_opt_t_parcelaaberta.py', '--cfg-path', '/tmp/tmpyc0ksojz']
+[2023-01-24T12:00:26.591-0300] {standard_task_runner.py:83} INFO - Job 1262: Subtask waiting_dock_opt
+[2023-01-24T12:00:29.706-0300] {task_command.py:389} INFO - Running <TaskInstance: raw_opt_t_parcelaaberta.waiting_dock_opt scheduled__2023-01-23T15:00:00+00:00 [running]> on host vm-airflow-01
+[2023-01-24T12:00:32.148-0300] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=matheus.rodrigues@fortbrasil.com.br
+AIRFLOW_CTX_DAG_ID=raw_opt_t_parcelaaberta
+AIRFLOW_CTX_TASK_ID=waiting_dock_opt
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-23T15:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-23T15:00:00+00:00
+[2023-01-24T12:00:33.173-0300] {base.py:73} INFO - Using connection ID 'dock_opt' for task execution.
+[2023-01-24T12:00:33.441-0300] {sql.py:91} INFO - Poking: select count(1) from t_control where name = 't_parcelaaberta' and convert(date, dt_start) = convert(date, getdate()) and dt_finish is not null (with parameters None)
+[2023-01-24T12:00:33.936-0300] {base.py:73} INFO - Using connection ID 'dock_opt' for task execution.
+[2023-01-24T12:00:34.440-0300] {sql.py:365} INFO - Running statement: select count(1) from t_control where name = 't_parcelaaberta' and convert(date, dt_start) = convert(date, getdate()) and dt_finish is not null, parameters: None
+[2023-01-24T12:00:34.694-0300] {base.py:228} INFO - Success criteria met. Exiting.
+[2023-01-24T12:00:35.172-0300] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=raw_opt_t_parcelaaberta, task_id=waiting_dock_opt, execution_date=20230123T150000, start_date=20230124T150025, end_date=20230124T150035
+[2023-01-24T12:00:35.662-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-24T12:00:36.614-0300] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

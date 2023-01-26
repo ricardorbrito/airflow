@@ -1,0 +1,34 @@
+[2023-01-25T12:48:38.746-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: bronze_opt_t_transacaofatura.run_databricks_notebook dataset_triggered__2023-01-25T15:48:27.787737+00:00 [queued]>
+[2023-01-25T12:48:39.128-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: bronze_opt_t_transacaofatura.run_databricks_notebook dataset_triggered__2023-01-25T15:48:27.787737+00:00 [queued]>
+[2023-01-25T12:48:39.129-0300] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-25T12:48:39.129-0300] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-25T12:48:39.129-0300] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-25T12:48:39.603-0300] {taskinstance.py:1304} INFO - Executing <Task(DatabricksSubmitRunOperator): run_databricks_notebook> on 2023-01-25 15:48:27.787737+00:00
+[2023-01-25T12:48:39.609-0300] {standard_task_runner.py:55} INFO - Started process 1750352 to run task
+[2023-01-25T12:48:39.613-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'bronze_opt_t_transacaofatura', 'run_databricks_notebook', 'dataset_triggered__2023-01-25T15:48:27.787737+00:00', '--job-id', '1489', '--raw', '--subdir', 'DAGS_FOLDER/bronze/dock_opt/bronze_opt_t_transacaofatura.py', '--cfg-path', '/tmp/tmpv8t8dmgh']
+[2023-01-25T12:48:39.616-0300] {standard_task_runner.py:83} INFO - Job 1489: Subtask run_databricks_notebook
+[2023-01-25T12:48:42.605-0300] {task_command.py:389} INFO - Running <TaskInstance: bronze_opt_t_transacaofatura.run_databricks_notebook dataset_triggered__2023-01-25T15:48:27.787737+00:00 [running]> on host vm-airflow-01
+[2023-01-25T12:48:45.461-0300] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=matheus.rodrigues@fortbrasil.com.br
+AIRFLOW_CTX_DAG_ID=bronze_opt_t_transacaofatura
+AIRFLOW_CTX_TASK_ID=run_databricks_notebook
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-25T15:48:27.787737+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=dataset_triggered__2023-01-25T15:48:27.787737+00:00
+[2023-01-25T12:48:45.966-0300] {base.py:73} INFO - Using connection ID 'adb' for task execution.
+[2023-01-25T12:48:46.158-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-25T12:48:50.390-0300] {databricks.py:50} INFO - Run submitted with run_id: 151982
+[2023-01-25T12:48:50.391-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-25T12:48:51.445-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-25T12:48:51.782-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': 'In run'}
+[2023-01-25T12:48:51.783-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/1087515304442901/run/151982
+[2023-01-25T12:48:51.783-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-25T12:49:21.792-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-25T12:49:22.110-0300] {databricks.py:61} INFO - run_databricks_notebook completed successfully.
+[2023-01-25T12:49:22.110-0300] {databricks.py:62} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/1087515304442901/run/151982
+[2023-01-25T12:49:22.118-0300] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py:1393 RemovedInAirflow3Warning: Passing 'execution_date' to 'TaskInstance.xcom_push()' is deprecated.
+[2023-01-25T12:49:23.263-0300] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=bronze_opt_t_transacaofatura, task_id=run_databricks_notebook, execution_date=20230125T154827, start_date=20230125T154838, end_date=20230125T154923
+[2023-01-25T12:49:24.345-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-25T12:49:24.926-0300] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

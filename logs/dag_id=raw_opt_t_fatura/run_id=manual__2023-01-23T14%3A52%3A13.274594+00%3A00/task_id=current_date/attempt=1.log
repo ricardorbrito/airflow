@@ -1,0 +1,23 @@
+[2023-01-23T11:53:54.166-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_fatura.current_date manual__2023-01-23T14:52:13.274594+00:00 [queued]>
+[2023-01-23T11:53:54.571-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_fatura.current_date manual__2023-01-23T14:52:13.274594+00:00 [queued]>
+[2023-01-23T11:53:54.571-0300] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-23T11:53:54.571-0300] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-23T11:53:54.571-0300] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-23T11:53:55.270-0300] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): current_date> on 2023-01-23 14:52:13.274594+00:00
+[2023-01-23T11:53:55.276-0300] {standard_task_runner.py:55} INFO - Started process 1107533 to run task
+[2023-01-23T11:53:55.281-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'raw_opt_t_fatura', 'current_date', 'manual__2023-01-23T14:52:13.274594+00:00', '--job-id', '1180', '--raw', '--subdir', 'DAGS_FOLDER/raw/dock_opt/raw_opt_t_fatura.py', '--cfg-path', '/tmp/tmpbp7392ao']
+[2023-01-23T11:53:55.284-0300] {standard_task_runner.py:83} INFO - Job 1180: Subtask current_date
+[2023-01-23T11:53:58.335-0300] {task_command.py:389} INFO - Running <TaskInstance: raw_opt_t_fatura.current_date manual__2023-01-23T14:52:13.274594+00:00 [running]> on host vm-airflow-01
+[2023-01-23T11:54:00.973-0300] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=matheus.rodrigues@fortbrasil.com.br
+AIRFLOW_CTX_DAG_ID=raw_opt_t_fatura
+AIRFLOW_CTX_TASK_ID=current_date
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-23T14:52:13.274594+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-23T14:52:13.274594+00:00
+[2023-01-23T11:54:00.974-0300] {python.py:177} INFO - Done. Returned value was: 2023-01-22
+[2023-01-23T11:54:02.240-0300] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=raw_opt_t_fatura, task_id=current_date, execution_date=20230123T145213, start_date=20230123T145354, end_date=20230123T145402
+[2023-01-23T11:54:02.756-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-23T11:54:03.469-0300] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

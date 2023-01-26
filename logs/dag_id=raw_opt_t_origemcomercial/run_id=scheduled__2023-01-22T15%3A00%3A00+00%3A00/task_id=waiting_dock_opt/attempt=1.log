@@ -1,0 +1,27 @@
+[2023-01-23T12:00:19.311-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_origemcomercial.waiting_dock_opt scheduled__2023-01-22T15:00:00+00:00 [queued]>
+[2023-01-23T12:00:19.708-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_origemcomercial.waiting_dock_opt scheduled__2023-01-22T15:00:00+00:00 [queued]>
+[2023-01-23T12:00:19.709-0300] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-23T12:00:19.709-0300] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-23T12:00:19.709-0300] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-23T12:00:20.377-0300] {taskinstance.py:1304} INFO - Executing <Task(SqlSensor): waiting_dock_opt> on 2023-01-22 15:00:00+00:00
+[2023-01-23T12:00:20.383-0300] {standard_task_runner.py:55} INFO - Started process 1108614 to run task
+[2023-01-23T12:00:20.388-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'raw_opt_t_origemcomercial', 'waiting_dock_opt', 'scheduled__2023-01-22T15:00:00+00:00', '--job-id', '1188', '--raw', '--subdir', 'DAGS_FOLDER/raw/dock_opt/raw_opt_t_origemcomercial.py', '--cfg-path', '/tmp/tmp8zini1yq']
+[2023-01-23T12:00:20.391-0300] {standard_task_runner.py:83} INFO - Job 1188: Subtask waiting_dock_opt
+[2023-01-23T12:00:23.449-0300] {task_command.py:389} INFO - Running <TaskInstance: raw_opt_t_origemcomercial.waiting_dock_opt scheduled__2023-01-22T15:00:00+00:00 [running]> on host vm-airflow-01
+[2023-01-23T12:00:26.106-0300] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=matheus.rodrigues@fortbrasil.com.br
+AIRFLOW_CTX_DAG_ID=raw_opt_t_origemcomercial
+AIRFLOW_CTX_TASK_ID=waiting_dock_opt
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-22T15:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-22T15:00:00+00:00
+[2023-01-23T12:00:27.146-0300] {base.py:73} INFO - Using connection ID 'dock_opt' for task execution.
+[2023-01-23T12:00:27.354-0300] {sql.py:91} INFO - Poking: select count(1) from t_control where name = 't_origemcomercial' and convert(date, dt_start) = convert(date, getdate()) and dt_finish is not null (with parameters None)
+[2023-01-23T12:00:27.847-0300] {base.py:73} INFO - Using connection ID 'dock_opt' for task execution.
+[2023-01-23T12:00:28.287-0300] {sql.py:365} INFO - Running statement: select count(1) from t_control where name = 't_origemcomercial' and convert(date, dt_start) = convert(date, getdate()) and dt_finish is not null, parameters: None
+[2023-01-23T12:00:28.470-0300] {base.py:228} INFO - Success criteria met. Exiting.
+[2023-01-23T12:00:28.934-0300] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=raw_opt_t_origemcomercial, task_id=waiting_dock_opt, execution_date=20230122T150000, start_date=20230123T150019, end_date=20230123T150028
+[2023-01-23T12:00:29.757-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-23T12:00:30.902-0300] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

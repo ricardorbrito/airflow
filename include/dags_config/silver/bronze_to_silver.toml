@@ -1,0 +1,22 @@
+
+[dags]
+[dags.default]
+template = '/home/airflow/airflow/include/dags_template/bronze_to_silver.py'
+folder = '/home/airflow/airflow/dags/silver/'
+
+# [BEGIN silver_t_produto] ------------------------------------------------------------------------
+[dags.silver_t_produto]
+dag_id = "'silver_t_produto'"
+tags = "['camada_silver', 'processo_full']"
+start_date = 'datetime(2023, 1, 24)'
+dataset = "'silver_t_produto'"
+dataset_upstream = "['bronze_opt_t_produto', 'bronze_opt_t_parametro']"
+
+[dags.silver_t_produto.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.silver_t_produto.tasks_args]
+adb = "'adb'"
+notebook_path = "'/Users/matheus.rodrigues@fortbrasil.com.br/_mdw/silver/jobs/t_produto'"
+catalog = "'hml'"
+# [END silver_t_produto] --------------------------------------------------------------------------

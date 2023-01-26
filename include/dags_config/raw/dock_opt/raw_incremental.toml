@@ -1,0 +1,149 @@
+
+[dags]
+[dags.default]
+template = '/home/airflow/airflow/include/dags_template/raw_adf_dock_opt_to_datalake_incremental.py'
+folder = '/home/airflow/airflow/dags/raw/dock_opt/'
+
+
+# [BEGIN raw_opt_t_fatura] ------------------------------------------------------------------------
+[dags.raw_opt_t_fatura]
+dag_id = "'raw_opt_t_fatura'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_incremental']"
+start_date = 'datetime(2023, 1, 23)'
+dataset = "'raw_opt_t_fatura'"
+
+[dags.raw_opt_t_fatura.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_fatura.tasks_args]
+adb = "'adb'"
+adb_catalog = "'hml'"
+adb_schema = "'bronze'"
+adb_table = "'opt_t_fatura'"
+adb_column = "'dt_faturamento'"
+adf = "'adf'"
+adf_pipeline = "'cp_opt_to_datalake'"
+adf_table = "'t_fatura'"
+adf_container = "'raw/dock_opt/t_fatura/'"
+# [END raw_opt_t_fatura] --------------------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_transacaofatura] ---------------------------------------------------------------
+[dags.raw_opt_t_transacaofatura]
+dag_id = "'raw_opt_t_transacaofatura'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_incremental']"
+start_date = 'datetime(2023, 1, 23)'
+dataset = "'raw_opt_t_transacaofatura'"
+
+[dags.raw_opt_t_transacaofatura.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_transacaofatura.tasks_args]
+adb = "'adb'"
+adb_catalog = "'hml'"
+adb_schema = "'bronze'"
+adb_table = "'opt_t_transacaofatura'"
+adb_column = "'dt_geracao'"
+adf = "'adf'"
+adf_pipeline = "'cp_opt_to_datalake'"
+adf_table = "'t_transacaofatura'"
+adf_container = "'raw/dock_opt/t_transacaofatura/'"
+# [END raw_opt_t_transacaofatura] -----------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_parcelamentofatura] ------------------------------------------------------------
+[dags.raw_opt_t_parcelamentofatura]
+dag_id = "'raw_opt_t_parcelamentofatura'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_incremental']"
+start_date = 'datetime(2023, 1, 23)'
+dataset = "'raw_opt_t_parcelamentofatura'"
+
+[dags.raw_opt_t_parcelamentofatura.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_parcelamentofatura.tasks_args]
+adb = "'adb'"
+adb_catalog = "'hml'"
+adb_schema = "'bronze'"
+adb_table = "'opt_t_parcelamentofatura'"
+adb_column = "'dt_vencimento'"
+adf = "'adf'"
+adf_pipeline = "'cp_opt_to_datalake'"
+adf_table = "'t_parcelamentofatura'"
+adf_container = "'raw/dock_opt/t_parcelamentofatura/'"
+# [END raw_opt_t_parcelamentofatura] --------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_eventocompra] ------------------------------------------------------------------
+[dags.raw_opt_t_eventocompra]
+dag_id = "'raw_opt_t_eventocompra'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_incremental']"
+start_date = 'datetime(2023, 1, 23)'
+dataset = "'raw_opt_t_eventocompra'"
+
+[dags.raw_opt_t_eventocompra.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_eventocompra.tasks_args]
+adb = "'adb'"
+adb_catalog = "'hml'"
+adb_schema = "'bronze'"
+adb_table = "'opt_t_eventocompra'"
+adb_column = "'dt_movimento'"
+adf = "'adf'"
+adf_pipeline = "'cp_opt_to_datalake'"
+adf_table = "'t_eventocompra'"
+adf_container = "'raw/dock_opt/t_eventocompra/'"
+# [END raw_opt_t_eventocompra] --------------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_eventopagamento] ---------------------------------------------------------------
+[dags.raw_opt_t_eventopagamento]
+dag_id = "'raw_opt_t_eventopagamento'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_incremental']"
+start_date = 'datetime(2023, 1, 23)'
+dataset = "'raw_opt_t_eventopagamento'"
+
+[dags.raw_opt_t_eventopagamento.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_eventopagamento.tasks_args]
+adb = "'adb'"
+adb_catalog = "'hml'"
+adb_schema = "'bronze'"
+adb_table = "'opt_t_eventopagamento'"
+adb_column = "'dt_movimento'"
+adf = "'adf'"
+adf_pipeline = "'cp_opt_to_datalake'"
+adf_table = "'t_eventopagamento'"
+adf_container = "'raw/dock_opt/t_eventopagamento/'"
+# [END raw_opt_t_eventopagamento] -----------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_eventoacordoativo] -------------------------------------------------------------
+[dags.raw_opt_t_eventoacordoativo]
+dag_id = "'raw_opt_t_eventoacordoativo'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_incremental']"
+start_date = 'datetime(2023, 1, 23)'
+dataset = "'raw_opt_t_eventoacordoativo'"
+
+[dags.raw_opt_t_eventoacordoativo.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_eventoacordoativo.tasks_args]
+adb = "'adb'"
+adb_catalog = "'hml'"
+adb_schema = "'bronze'"
+adb_table = "'opt_t_eventoacordoativo'"
+adb_column = "'dt_geracao'"
+adf = "'adf'"
+adf_pipeline = "'cp_opt_to_datalake'"
+adf_table = "'t_eventoacordoativo'"
+adf_container = "'raw/dock_opt/t_eventoacordoativo/'"
+# [END raw_opt_t_eventoacordoativo] ---------------------------------------------------------------

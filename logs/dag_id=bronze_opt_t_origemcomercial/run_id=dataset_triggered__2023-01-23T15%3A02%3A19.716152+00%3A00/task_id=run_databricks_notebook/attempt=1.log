@@ -1,0 +1,62 @@
+[2023-01-23T12:02:44.582-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: bronze_opt_t_origemcomercial.run_databricks_notebook dataset_triggered__2023-01-23T15:02:19.716152+00:00 [queued]>
+[2023-01-23T12:02:45.079-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: bronze_opt_t_origemcomercial.run_databricks_notebook dataset_triggered__2023-01-23T15:02:19.716152+00:00 [queued]>
+[2023-01-23T12:02:45.080-0300] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-23T12:02:45.080-0300] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-23T12:02:45.080-0300] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-23T12:02:45.622-0300] {taskinstance.py:1304} INFO - Executing <Task(DatabricksSubmitRunOperator): run_databricks_notebook> on 2023-01-23 15:02:19.716152+00:00
+[2023-01-23T12:02:45.628-0300] {standard_task_runner.py:55} INFO - Started process 1109051 to run task
+[2023-01-23T12:02:45.632-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'bronze_opt_t_origemcomercial', 'run_databricks_notebook', 'dataset_triggered__2023-01-23T15:02:19.716152+00:00', '--job-id', '1208', '--raw', '--subdir', 'DAGS_FOLDER/bronze/dock_opt/bronze_opt_t_origemcomercial.py', '--cfg-path', '/tmp/tmpfl1qxe0a']
+[2023-01-23T12:02:45.638-0300] {standard_task_runner.py:83} INFO - Job 1208: Subtask run_databricks_notebook
+[2023-01-23T12:02:49.045-0300] {task_command.py:389} INFO - Running <TaskInstance: bronze_opt_t_origemcomercial.run_databricks_notebook dataset_triggered__2023-01-23T15:02:19.716152+00:00 [running]> on host vm-airflow-01
+[2023-01-23T12:02:51.538-0300] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=matheus.rodrigues@fortbrasil.com.br
+AIRFLOW_CTX_DAG_ID=bronze_opt_t_origemcomercial
+AIRFLOW_CTX_TASK_ID=run_databricks_notebook
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-23T15:02:19.716152+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=dataset_triggered__2023-01-23T15:02:19.716152+00:00
+[2023-01-23T12:02:52.053-0300] {base.py:73} INFO - Using connection ID 'adb' for task execution.
+[2023-01-23T12:02:52.251-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:02:53.621-0300] {databricks.py:50} INFO - Run submitted with run_id: 75744
+[2023-01-23T12:02:53.622-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:02:54.649-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:02:54.959-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': '', 'state_message': ''}
+[2023-01-23T12:02:54.960-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/444409198291693/run/75744
+[2023-01-23T12:02:54.960-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-23T12:03:24.988-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:03:25.301-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': '', 'state_message': ''}
+[2023-01-23T12:03:25.301-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/444409198291693/run/75744
+[2023-01-23T12:03:25.301-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-23T12:03:55.332-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:03:55.605-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'PENDING', 'result_state': '', 'state_message': ''}
+[2023-01-23T12:03:55.605-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/444409198291693/run/75744
+[2023-01-23T12:03:55.605-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-23T12:04:25.628-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:04:25.972-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': 'In run'}
+[2023-01-23T12:04:25.972-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/444409198291693/run/75744
+[2023-01-23T12:04:25.973-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-23T12:04:55.996-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:04:56.282-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': 'In run'}
+[2023-01-23T12:04:56.283-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/444409198291693/run/75744
+[2023-01-23T12:04:56.283-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-23T12:05:26.313-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:05:26.576-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': 'In run'}
+[2023-01-23T12:05:26.576-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/444409198291693/run/75744
+[2023-01-23T12:05:26.576-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-23T12:05:56.594-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:05:56.864-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': 'In run'}
+[2023-01-23T12:05:56.864-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/444409198291693/run/75744
+[2023-01-23T12:05:56.864-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-23T12:06:26.892-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:06:27.174-0300] {databricks.py:91} INFO - run_databricks_notebook in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': 'In run'}
+[2023-01-23T12:06:27.175-0300] {databricks.py:92} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/444409198291693/run/75744
+[2023-01-23T12:06:27.175-0300] {databricks.py:93} INFO - Sleeping for 30 seconds.
+[2023-01-23T12:06:57.205-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T12:06:57.467-0300] {databricks.py:61} INFO - run_databricks_notebook completed successfully.
+[2023-01-23T12:06:57.468-0300] {databricks.py:62} INFO - View run status, Spark UI, and logs at https://adb-1362567168960874.14.azuredatabricks.net/?o=1362567168960874#job/444409198291693/run/75744
+[2023-01-23T12:06:57.475-0300] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py:1393 RemovedInAirflow3Warning: Passing 'execution_date' to 'TaskInstance.xcom_push()' is deprecated.
+[2023-01-23T12:06:58.630-0300] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=bronze_opt_t_origemcomercial, task_id=run_databricks_notebook, execution_date=20230123T150219, start_date=20230123T150244, end_date=20230123T150658
+[2023-01-23T12:06:59.482-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-23T12:07:00.082-0300] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

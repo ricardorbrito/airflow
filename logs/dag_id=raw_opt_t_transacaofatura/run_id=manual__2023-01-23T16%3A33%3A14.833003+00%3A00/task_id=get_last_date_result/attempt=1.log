@@ -1,0 +1,26 @@
+[2023-01-23T13:34:36.664-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_transacaofatura.get_last_date_result manual__2023-01-23T16:33:14.833003+00:00 [queued]>
+[2023-01-23T13:34:37.050-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_transacaofatura.get_last_date_result manual__2023-01-23T16:33:14.833003+00:00 [queued]>
+[2023-01-23T13:34:37.051-0300] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-23T13:34:37.051-0300] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-23T13:34:37.051-0300] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-23T13:34:37.698-0300] {taskinstance.py:1304} INFO - Executing <Task(GetDatabricksResultOperator): get_last_date_result> on 2023-01-23 16:33:14.833003+00:00
+[2023-01-23T13:34:37.704-0300] {standard_task_runner.py:55} INFO - Started process 1124334 to run task
+[2023-01-23T13:34:37.709-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'raw_opt_t_transacaofatura', 'get_last_date_result', 'manual__2023-01-23T16:33:14.833003+00:00', '--job-id', '1218', '--raw', '--subdir', 'DAGS_FOLDER/raw/dock_opt/raw_opt_t_transacaofatura.py', '--cfg-path', '/tmp/tmpgx9f3p1r']
+[2023-01-23T13:34:37.714-0300] {standard_task_runner.py:83} INFO - Job 1218: Subtask get_last_date_result
+[2023-01-23T13:34:40.784-0300] {task_command.py:389} INFO - Running <TaskInstance: raw_opt_t_transacaofatura.get_last_date_result manual__2023-01-23T16:33:14.833003+00:00 [running]> on host vm-airflow-01
+[2023-01-23T13:34:43.248-0300] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=matheus.rodrigues@fortbrasil.com.br
+AIRFLOW_CTX_DAG_ID=raw_opt_t_transacaofatura
+AIRFLOW_CTX_TASK_ID=get_last_date_result
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-23T16:33:14.833003+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-23T16:33:14.833003+00:00
+[2023-01-23T13:34:44.301-0300] {base.py:73} INFO - Using connection ID 'adb' for task execution.
+[2023-01-23T13:34:44.498-0300] {databricks_base.py:424} INFO - Using token auth. For security reasons, please set token in Password field instead of extra
+[2023-01-23T13:34:44.975-0300] {raw_opt_t_transacaofatura.py:30} INFO - Result:
+[2023-01-23T13:34:44.976-0300] {raw_opt_t_transacaofatura.py:31} INFO - 1900-01-01
+[2023-01-23T13:34:46.191-0300] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=raw_opt_t_transacaofatura, task_id=get_last_date_result, execution_date=20230123T163314, start_date=20230123T163436, end_date=20230123T163446
+[2023-01-23T13:34:46.711-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-23T13:34:47.498-0300] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

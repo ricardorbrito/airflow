@@ -1,0 +1,195 @@
+
+[dags]
+[dags.default]
+template = '/home/airflow/airflow/include/dags_template/raw_adf_dock_opt_to_datalake_full.py'
+folder = '/home/airflow/airflow/dags/raw/dock_opt/'
+
+
+# [BEGIN raw_opt_t_conta] -------------------------------------------------------------------------
+[dags.raw_opt_t_conta]
+dag_id = "'raw_opt_t_conta'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_conta'"
+
+[dags.raw_opt_t_conta.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_conta.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_conta'"
+container_name = "'raw/dock_opt/t_conta/'"
+# [END raw_opt_t_conta] ---------------------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_produto] -----------------------------------------------------------------------
+[dags.raw_opt_t_produto]
+dag_id = "'raw_opt_t_produto'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_produto'"
+
+[dags.raw_opt_t_produto.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_produto.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_produto'"
+container_name = "'raw/dock_opt/t_produto/'"
+# [END raw_opt_t_produto] -------------------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_operacao] ----------------------------------------------------------------------
+[dags.raw_opt_t_operacao]
+dag_id = "'raw_opt_t_operacao'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_operacao'"
+
+[dags.raw_opt_t_operacao.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_operacao.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_operacao'"
+container_name = "'raw/dock_opt/t_operacao/'"
+# [END raw_opt_t_operacao] ------------------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_pessoafisica] ------------------------------------------------------------------
+[dags.raw_opt_t_pessoafisica]
+dag_id = "'raw_opt_t_pessoafisica'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_pessoafisica'"
+
+[dags.raw_opt_t_pessoafisica.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_pessoafisica.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_pessoafisica'"
+container_name = "'raw/dock_opt/t_pessoafisica/'"
+# [END raw_opt_t_pessoafisica] --------------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_statusconta] -------------------------------------------------------------------
+[dags.raw_opt_t_statusconta]
+dag_id = "'raw_opt_t_statusconta'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_statusconta'"
+
+[dags.raw_opt_t_statusconta.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_statusconta.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_statusconta'"
+container_name = "'raw/dock_opt/t_statusconta/'"
+# [END raw_opt_t_statusconta] ---------------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_origemcomercial] ---------------------------------------------------------------
+[dags.raw_opt_t_origemcomercial]
+dag_id = "'raw_opt_t_origemcomercial'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_origemcomercial'"
+
+[dags.raw_opt_t_origemcomercial.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_origemcomercial.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_origemcomercial'"
+container_name = "'raw/dock_opt/t_origemcomercial/'"
+# [END raw_opt_t_origemcomercial] -----------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_servicoconta] ------------------------------------------------------------------
+[dags.raw_opt_t_servicoconta]
+dag_id = "'raw_opt_t_servicoconta'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_servicoconta'"
+
+[dags.raw_opt_t_servicoconta.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_servicoconta.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_servicoconta'"
+container_name = "'raw/dock_opt/t_servicoconta/'"
+# [END raw_opt_t_servicoconta] --------------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_estabelecimento] ---------------------------------------------------------------
+[dags.raw_opt_t_estabelecimento]
+dag_id = "'raw_opt_t_estabelecimento'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_estabelecimento'"
+
+[dags.raw_opt_t_estabelecimento.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_estabelecimento.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_estabelecimento'"
+container_name = "'raw/dock_opt/t_estabelecimento/'"
+# [END raw_opt_t_estabelecimento] -----------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_parcelaaberta] -----------------------------------------------------------------
+[dags.raw_opt_t_parcelaaberta]
+dag_id = "'raw_opt_t_parcelaaberta'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_parcelaaberta'"
+
+[dags.raw_opt_t_parcelaaberta.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_parcelaaberta.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_parcelaaberta'"
+container_name = "'raw/dock_opt/t_parcelaaberta/'"
+# [END raw_opt_t_parcelaaberta] -------------------------------------------------------------------
+
+
+# [BEGIN raw_opt_t_parametro] ---------------------------------------------------------------------
+[dags.raw_opt_t_parametro]
+dag_id = "'raw_opt_t_parametro'"
+schedule = "'0 15 * * *'"
+tags = "['fonte_opt', 'camada_raw', 'processo_full']"
+start_date = 'datetime(2023, 1, 10)'
+dataset = "'raw_opt_t_parametro'"
+
+[dags.raw_opt_t_parametro.default_args]
+owner = 'matheus.rodrigues@fortbrasil.com.br'
+
+[dags.raw_opt_t_parametro.tasks_args]
+adf_conn = "'adf'"
+pipeline_name = "'cp_opt_to_datalake'"
+table_name = "'t_parametro'"
+container_name = "'raw/dock_opt/t_parametro/'"
+# [END raw_opt_t_parametro] -----------------------------------------------------------------------

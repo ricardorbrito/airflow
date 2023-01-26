@@ -1,0 +1,245 @@
+[2023-01-22T12:00:55.555-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_servicoconta.run_adf_pipeline scheduled__2023-01-21T15:00:00+00:00 [queued]>
+[2023-01-22T12:00:55.931-0300] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: raw_opt_t_servicoconta.run_adf_pipeline scheduled__2023-01-21T15:00:00+00:00 [queued]>
+[2023-01-22T12:00:55.932-0300] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T12:00:55.932-0300] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2023-01-22T12:00:55.932-0300] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T12:00:56.603-0300] {taskinstance.py:1304} INFO - Executing <Task(AzureDataFactoryRunPipelineOperator): run_adf_pipeline> on 2023-01-21 15:00:00+00:00
+[2023-01-22T12:00:56.609-0300] {standard_task_runner.py:55} INFO - Started process 875980 to run task
+[2023-01-22T12:00:56.613-0300] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'raw_opt_t_servicoconta', 'run_adf_pipeline', 'scheduled__2023-01-21T15:00:00+00:00', '--job-id', '1156', '--raw', '--subdir', 'DAGS_FOLDER/raw/dock_opt/raw_opt_t_servicoconta.py', '--cfg-path', '/tmp/tmpr46w3d5k']
+[2023-01-22T12:00:56.617-0300] {standard_task_runner.py:83} INFO - Job 1156: Subtask run_adf_pipeline
+[2023-01-22T12:00:59.602-0300] {task_command.py:389} INFO - Running <TaskInstance: raw_opt_t_servicoconta.run_adf_pipeline scheduled__2023-01-21T15:00:00+00:00 [running]> on host vm-airflow-01
+[2023-01-22T12:01:02.473-0300] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=matheus.rodrigues@fortbrasil.com.br
+AIRFLOW_CTX_DAG_ID=raw_opt_t_servicoconta
+AIRFLOW_CTX_TASK_ID=run_adf_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-21T15:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-21T15:00:00+00:00
+[2023-01-22T12:01:02.474-0300] {data_factory.py:154} INFO - Executing the cp_opt_to_datalake pipeline.
+[2023-01-22T12:01:02.959-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:01:03.454-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:01:03.957-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:01:03.967-0300] {_universal.py:526} INFO - Request URL: 'https://login.microsoftonline.com:443/d47e09d1-17c6-4a6f-b65c-d49d61e186a2/v2.0/.well-known/openid-configuration'
+Request method: 'GET'
+Request headers:
+    'User-Agent': 'azsdk-python-identity/1.12.0 Python/3.10.6 (Linux-5.15.0-58-generic-x86_64-with-glibc2.35)'
+No body was attached to the request
+[2023-01-22T12:01:04.384-0300] {_universal.py:554} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '8ec25c36-2760-48b6-abab-8513230c0800'
+    'x-ms-ests-server': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Sun, 22 Jan 2023 15:01:03 GMT'
+    'Content-Length': '1753'
+[2023-01-22T12:01:04.386-0300] {_universal.py:526} INFO - Request URL: 'https://login.microsoftonline.com/common/discovery/instance?api-version=REDACTED&authorization_endpoint=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'User-Agent': 'azsdk-python-identity/1.12.0 Python/3.10.6 (Linux-5.15.0-58-generic-x86_64-with-glibc2.35)'
+No body was attached to the request
+[2023-01-22T12:01:04.619-0300] {_universal.py:554} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'max-age=86400, private'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Access-Control-Allow-Origin': 'REDACTED'
+    'Access-Control-Allow-Methods': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': '38967ad0-8eba-412b-8028-73e742251e00'
+    'x-ms-ests-server': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Sun, 22 Jan 2023 15:01:03 GMT'
+    'Content-Length': '945'
+[2023-01-22T12:01:04.620-0300] {_universal.py:523} INFO - Request URL: 'https://login.microsoftonline.com/d47e09d1-17c6-4a6f-b65c-d49d61e186a2/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Accept': 'application/json'
+    'x-client-sku': 'REDACTED'
+    'x-client-ver': 'REDACTED'
+    'x-client-os': 'REDACTED'
+    'x-client-cpu': 'REDACTED'
+    'x-ms-lib-capability': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-client-current-telemetry': 'REDACTED'
+    'x-client-last-telemetry': 'REDACTED'
+    'User-Agent': 'azsdk-python-identity/1.12.0 Python/3.10.6 (Linux-5.15.0-58-generic-x86_64-with-glibc2.35)'
+A body is sent with the request
+[2023-01-22T12:01:04.859-0300] {_universal.py:554} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'P3P': 'REDACTED'
+    'client-request-id': 'REDACTED'
+    'x-ms-request-id': '6644234d-6706-4ffd-96b7-7530b0620e00'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-clitelem': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Sun, 22 Jan 2023 15:01:04 GMT'
+    'Content-Length': '1391'
+[2023-01-22T12:01:04.860-0300] {get_token_mixin.py:77} INFO - ClientSecretCredential.get_token succeeded
+[2023-01-22T12:01:04.860-0300] {_universal.py:523} INFO - Request URL: 'https://management.azure.com/subscriptions/5e5642ec-dd71-4e9a-a29e-58effbf39209/resourceGroups/rg-mdw-hml-fb/providers/Microsoft.DataFactory/factories/adf-mdw-hml-fb/pipelines/cp_opt_to_datalake/createRun?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Accept': 'application/json'
+    'Content-Length': '132'
+    'x-ms-client-request-id': '975532c4-9a65-11ed-a50b-05e3ce77118f'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/1.1.0 Python/3.10.6 (Linux-5.15.0-58-generic-x86_64-with-glibc2.35)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2023-01-22T12:01:05.687-0300] {_universal.py:554} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'Server': 'Kestrel'
+    'x-ms-ratelimit-remaining-subscription-writes': 'REDACTED'
+    'x-ms-request-id': '3aea2ea4-09ea-4316-8410-8c84bc104b91'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Sun, 22 Jan 2023 15:01:05 GMT'
+[2023-01-22T12:01:06.369-0300] {data_factory.py:172} INFO - Waiting for pipeline run 975532c4-9a65-11ed-a50b-05e3ce77118f to terminate.
+[2023-01-22T12:01:06.370-0300] {data_factory.py:768} INFO - Getting the status of run ID 975532c4-9a65-11ed-a50b-05e3ce77118f.
+[2023-01-22T12:01:06.864-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:01:07.362-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:01:07.364-0300] {_universal.py:526} INFO - Request URL: 'https://management.azure.com/subscriptions/5e5642ec-dd71-4e9a-a29e-58effbf39209/resourceGroups/rg-mdw-hml-fb/providers/Microsoft.DataFactory/factories/adf-mdw-hml-fb/pipelineruns/975532c4-9a65-11ed-a50b-05e3ce77118f?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '995b7eca-9a65-11ed-a50b-05e3ce77118f'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/1.1.0 Python/3.10.6 (Linux-5.15.0-58-generic-x86_64-with-glibc2.35)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2023-01-22T12:01:07.457-0300] {_universal.py:554} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'Server': 'Kestrel'
+    'x-ms-ratelimit-remaining-subscription-reads': 'REDACTED'
+    'x-ms-request-id': '9c50bf44-e463-46ee-8448-7460fe3cee20'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Sun, 22 Jan 2023 15:01:06 GMT'
+[2023-01-22T12:01:07.468-0300] {data_factory.py:774} INFO - Current status of pipeline run 975532c4-9a65-11ed-a50b-05e3ce77118f: InProgress
+[2023-01-22T12:02:07.528-0300] {data_factory.py:768} INFO - Getting the status of run ID 975532c4-9a65-11ed-a50b-05e3ce77118f.
+[2023-01-22T12:02:08.026-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:02:08.526-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:02:08.528-0300] {_universal.py:526} INFO - Request URL: 'https://management.azure.com/subscriptions/5e5642ec-dd71-4e9a-a29e-58effbf39209/resourceGroups/rg-mdw-hml-fb/providers/Microsoft.DataFactory/factories/adf-mdw-hml-fb/pipelineruns/975532c4-9a65-11ed-a50b-05e3ce77118f?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'bdd0602c-9a65-11ed-a50b-05e3ce77118f'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/1.1.0 Python/3.10.6 (Linux-5.15.0-58-generic-x86_64-with-glibc2.35)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2023-01-22T12:02:08.620-0300] {_universal.py:554} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'Server': 'Kestrel'
+    'x-ms-ratelimit-remaining-subscription-reads': 'REDACTED'
+    'x-ms-request-id': '342fe88d-b102-42c2-8120-9521281d0ba8'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Sun, 22 Jan 2023 15:02:07 GMT'
+[2023-01-22T12:02:08.621-0300] {data_factory.py:774} INFO - Current status of pipeline run 975532c4-9a65-11ed-a50b-05e3ce77118f: InProgress
+[2023-01-22T12:03:08.672-0300] {data_factory.py:768} INFO - Getting the status of run ID 975532c4-9a65-11ed-a50b-05e3ce77118f.
+[2023-01-22T12:03:09.172-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:03:09.672-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:03:09.674-0300] {_universal.py:526} INFO - Request URL: 'https://management.azure.com/subscriptions/5e5642ec-dd71-4e9a-a29e-58effbf39209/resourceGroups/rg-mdw-hml-fb/providers/Microsoft.DataFactory/factories/adf-mdw-hml-fb/pipelineruns/975532c4-9a65-11ed-a50b-05e3ce77118f?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': 'e2428aa2-9a65-11ed-a50b-05e3ce77118f'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/1.1.0 Python/3.10.6 (Linux-5.15.0-58-generic-x86_64-with-glibc2.35)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2023-01-22T12:03:09.803-0300] {_universal.py:554} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'Server': 'Kestrel'
+    'x-ms-ratelimit-remaining-subscription-reads': 'REDACTED'
+    'x-ms-request-id': 'aebf4fd6-6ab4-4bcf-b020-e9d71143875b'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Sun, 22 Jan 2023 15:03:09 GMT'
+[2023-01-22T12:03:09.804-0300] {data_factory.py:774} INFO - Current status of pipeline run 975532c4-9a65-11ed-a50b-05e3ce77118f: InProgress
+[2023-01-22T12:04:09.864-0300] {data_factory.py:768} INFO - Getting the status of run ID 975532c4-9a65-11ed-a50b-05e3ce77118f.
+[2023-01-22T12:04:10.360-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:04:10.884-0300] {base.py:73} INFO - Using connection ID 'adf' for task execution.
+[2023-01-22T12:04:10.886-0300] {_universal.py:526} INFO - Request URL: 'https://management.azure.com/subscriptions/5e5642ec-dd71-4e9a-a29e-58effbf39209/resourceGroups/rg-mdw-hml-fb/providers/Microsoft.DataFactory/factories/adf-mdw-hml-fb/pipelineruns/975532c4-9a65-11ed-a50b-05e3ce77118f?api-version=REDACTED'
+Request method: 'GET'
+Request headers:
+    'Accept': 'application/json'
+    'x-ms-client-request-id': '06bebc02-9a66-11ed-a50b-05e3ce77118f'
+    'User-Agent': 'azsdk-python-mgmt-datafactory/1.1.0 Python/3.10.6 (Linux-5.15.0-58-generic-x86_64-with-glibc2.35)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2023-01-22T12:04:11.009-0300] {_universal.py:554} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Expires': '-1'
+    'Vary': 'REDACTED'
+    'x-ms-correlation-request-id': 'REDACTED'
+    'Server': 'Kestrel'
+    'x-ms-ratelimit-remaining-subscription-reads': 'REDACTED'
+    'x-ms-request-id': '46672dc2-dce8-4eab-becd-3aa05a913111'
+    'x-ms-routing-request-id': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'Date': 'Sun, 22 Jan 2023 15:04:10 GMT'
+[2023-01-22T12:04:11.009-0300] {data_factory.py:774} INFO - Current status of pipeline run 975532c4-9a65-11ed-a50b-05e3ce77118f: Succeeded
+[2023-01-22T12:04:11.010-0300] {data_factory.py:182} INFO - Pipeline run 975532c4-9a65-11ed-a50b-05e3ce77118f has completed successfully.
+[2023-01-22T12:04:11.013-0300] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py:1393 RemovedInAirflow3Warning: Passing 'execution_date' to 'TaskInstance.xcom_push()' is deprecated.
+[2023-01-22T12:04:12.172-0300] {taskinstance.py:1322} INFO - Marking task as SUCCESS. dag_id=raw_opt_t_servicoconta, task_id=run_adf_pipeline, execution_date=20230121T150000, start_date=20230122T150055, end_date=20230122T150412
+[2023-01-22T12:04:13.253-0300] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-22T12:04:13.798-0300] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
